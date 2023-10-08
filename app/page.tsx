@@ -34,13 +34,13 @@ export default function Chat() {
 		}
 	};
 	return (
-		<div className="relative w-full max-w-4xl py-6 mx-auto p-4">
-			<h1 className="font-semibold font-serif text-3xl leding-normal text-center bg-gradient-to-l from-blue-200 via-purple-400 to-pink-300 text-transparent w-40  bg-clip-text mx-auto shadow-lg">
-				MaikeGPT
-			</h1>
+		<div className="relative w-full max-w-xs md:max-w-4xl py-6 md:mx-auto">
 			<div
 				ref={chatContainerRef}
-				className="border-x min-h-[87vh] max-h-[87vh] rounded-lg p-5 overflow-y-auto">
+				className="border-x min-h-[70vh] max-h-[80vh] md:min-h-[93vh] md:max-h-[93vh] rounded-lg p-1.5 pb-20 md:p-5 md:mb-6 overflow-y-auto">
+				<h1 className="font-semibold font-serif text-3xl leding-normal text-center bg-gradient-to-l from-blue-200 via-purple-400 to-pink-300 text-transparent bg-clip-text mx-auto shadow-lg">
+					MaikeGPT
+				</h1>
 				{messages.length > 0
 					? messages.map((m) => (
 							<p
@@ -59,7 +59,7 @@ export default function Chat() {
 			</div>
 
 			<form onSubmit={handleSubmit}>
-				<div className="absolute inset-x-0 bottom-0 mx-auto px-6 flex gap-1.5 w-full max-w-3xl">
+				<div className="absolute inset-x-0 bottom-8 mx-auto px-3 flex gap-1.5 w-full md:max-w-3xl md:gap-3">
 					<Input
 						value={input}
 						placeholder="Send a message"
